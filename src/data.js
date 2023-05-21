@@ -2001,3 +2001,102 @@ const movies = [
     score: 8
   }
 ];
+
+const movies2 = [
+  {
+    title: 'The Shawshank Redemption',
+    year: 1994,
+    director: 'Frank Darabont',
+    duration: '2h 22min',
+    genre: ['Crime', 'Drama'],
+    score: 9.3
+  },
+  {
+    title: 'The Shawshank Redemption',
+    year: 1994,
+    director: 'Frank Darabont',
+    duration: '2h 22min',
+    genre: ['Crime', 'Drama'],
+    score: 9.9
+  },
+  {
+    title: 'The Godfather',
+    year: 1972,
+    director: 'Francis Ford Coppola',
+    duration: '2h 55min',
+    genre: ['Crime', 'Drama'],
+  }];
+
+  let movies3 =[];
+
+  const movies4 = [
+    {
+      title: 'The Shawshank Redemption',
+      year: 1994,
+      director: 'Frank Darabont',
+      duration: '2h 22min',
+      genre: ['Crime', 'Drama'],
+      score: 8
+    },
+    {
+      title: 'The Shawshank Redemption',
+      year: 1994,
+      director: 'Frank Darabont',
+      duration: '2h 22min',
+      genre: ['Crime', 'Drama'],
+      score: 8
+    }];
+
+
+    function orderAlphabetically(moviesArray) {
+      const nameMovies = moviesArray.slice();
+      nameMovies.sort((name1, name2) => name1.title.localeCompare(name2.title));
+      const firts20Titles = nameMovies.slice(0, 20).map(nameMovies => nameMovies.title);
+      
+      return firts20Titles;
+  }
+      
+console.log(orderAlphabetically(movies));
+
+  //   function dramaMoviesScore(moviesArray) {
+  //     let dramaMovie = moviesArray.filter(movie => movie.genre.includes("Drama"));
+  //     let dramaMovieWithScore = dramaMovie.filter(movie => movie.score);
+  //     let sumaDramaMoviesScore = dramaMovieWithScore.map(movie => movie.score);
+  //     let averageDramaMovie = sumaDramaMoviesScore.reduce((acumulador, valorActual) => acumulador + valorActual) / sumaDramaMoviesScore.length;
+  //     return averageDramaMovie.toFixed(2);
+  // }
+
+  // console.log(dramaMoviesScore(movies4));
+
+//   function scoresAverage(moviesArray) {
+//     if (moviesArray.length === 0) {
+//         return 0;
+//       }
+//     let allMoviesWithScore = moviesArray.filter(movie => movie.score)
+//     let allMoviesScore = allMoviesWithScore.map(movie => movie.score);
+//     let average = allMoviesScore.reduce((acumulador, valorActual) => acumulador + valorActual) / allMoviesScore.length;
+//     return average.toFixed(2);
+// }
+
+
+// console.log(scoresAverage(movies4));
+
+// function getAllDirectors(moviesArray) {
+//   let newMoviesArray = moviesArray.map(movie => movie.director);
+//   return newMoviesArray;
+// }
+
+// console.log(getAllDirectors(movies));
+
+// function howManyMovies(moviesArray) {
+//   let stevenSpielbergMovies = moviesArray.filter(movie => movie.director === 'Steven Spielberg');
+//   let stevenSpielbergMoviesDrama = stevenSpielbergMovies.filter(movie => movie.genre.includes('Drama'));
+//   let stevenSpielbergMoviesDramaLength = stevenSpielbergMoviesDrama.length;
+//   return stevenSpielbergMoviesDramaLength;
+// }
+// console.log(howManyMovies(movies));
+
+// function getAllDirectors(moviesArray) {
+//   let newMoviesArray = moviesArray.map(movie => movie.director);
+//   return newMoviesArray;
+// }
